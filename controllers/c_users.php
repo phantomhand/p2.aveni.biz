@@ -3,7 +3,7 @@ class users_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        echo "users_controller construct called<br><br>";
+        #echo "users_controller construct called<br><br>";
     } 
 
     public function index() {
@@ -42,7 +42,10 @@ class users_controller extends base_controller {
 		
 	    # For now, just confirm they've signed up - 
 	    # You should eventually make a proper View for this
-	    echo 'You\'re signed up';        
+	    # echo 'You\'re signed up!'; 
+	    
+	    # Redirect to the login page
+	    Router::redirect("/users/login");	    	           
     }
 
     public function login($error = NULL) {
@@ -75,7 +78,8 @@ class users_controller extends base_controller {
 	    # Login failed
 	    if(!$token) {
 	        # Note the addition of the parameter "error"
-	        Router::redirect("/users/login/error"); 
+	        Router::redirect("/users/login/error");
+ 
 	    }
 	    # Login passed
 	    else {

@@ -122,8 +122,6 @@ class users_controller extends base_controller {
 		# Pass the data to the View
 		$this->template->content->user_name = $user_name;
 		
-		# Display the view
-		echo $this->template;	
 		
 		# If user is blank, they're not logged in; redirect them to the login page
 	    if(!$this->user) {
@@ -134,7 +132,7 @@ class users_controller extends base_controller {
 	
 	    # Setup view
 	    $this->template->content = View::instance('v_users_profile');
-	    $this->template->title   = "Profile of".$this->user->first_name;
+	    $this->template->title   = "Blabber | ".$this->user->first_name;
 	
 	    # Render template
 	    echo $this->template;

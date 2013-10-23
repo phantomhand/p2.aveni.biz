@@ -1,11 +1,16 @@
-<aside id="featured" class="body"><article>
-	<figure>
-		<img src="../images/blabber-logo-sm.png" alt="Blabber" />
-	</figure>
-	<hgroup>
-		<h2><?=$user->first_name?>'s Profile</h2>
-	</hgroup>
-	<p>Discover how to use Graceful Degradation and Progressive Enhancement techniques to achieve an outstanding, cross-browser <a href="http://dev.w3.org/html5/spec/Overview.html" rel="external">HTML5</a> and <a href="http://www.w3.org/TR/css3-roadmap/" rel="external">CSS3</a> website today!</p>
- 
-</article></aside><!-- /#featured -->
+<aside id="featured" class="body">
+	<article>
+		<figure>
+			<img src="../images/avatar-female.png" alt="Blabbr User Pic" height="200" width="200" />
+		</figure>
+			<hgroup>
+				<h2><?=$user->first_name?>'s Profile</h2>
+			</hgroup>
+			<p><strong>Name:</strong> <?=$user->first_name?> <?=$user->last_name?><br>
+			<strong>Email:</strong> <?=$user->email?></p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium orci a molestie commodo. Aliquam sed metus libero. Maecenas adipiscing tempus accumsan. Mauris venenatis dictum arcu at interdum. Vestibulum fermentum augue id scelerisque egestas. Nam malesuada, mauris placerat malesuada consectetur.</p>
+			
+	</article>
+</aside><!-- /#featured -->
 

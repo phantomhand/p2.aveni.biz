@@ -11,8 +11,6 @@ class users_controller extends base_controller {
     }
 
     public function signup() {
-        #echo "This is the signup page";
-
         # Setup view
             $this->template->content = View::instance('v_users_signup');
             $this->template->title   = "Sign Up";
@@ -107,8 +105,7 @@ class users_controller extends base_controller {
 	    Router::redirect("/");
     }
 
-    public function profile($user_name = NULL) {
-    
+    public function profile($user_name = NULL) {   
     	# Set up the View
     	$this->template->content = View::instance('v_users_profile');
     	$this->template->title = "Profile";
@@ -132,7 +129,7 @@ class users_controller extends base_controller {
 	
 	    # Setup view
 	    $this->template->content = View::instance('v_users_profile');
-	    $this->template->title   = "Blabber | ".$this->user->first_name;
+	    $this->template->title   = "Blabbr | ".$this->user->first_name;
 	
 	    # Render template
 	    echo $this->template;

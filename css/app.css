@@ -1,12 +1,3 @@
-/*
-	Name: Smashing HTML5
-	Date: July 2009
-	Description: Sample layout for HTML5 and CSS3 goodness.
-	Version: 1.0
-	Author: Enrique Ram’rez
-	Autor URI: http://enrique-ramirez.com
-*/
- 
 /* Imports */
 @import url("reset.css");
 @import url("global-forms.css");
@@ -14,10 +5,10 @@
 /***** Global *****/
 /* Body */
 	body {
-		background: #F5F4EF url('../images/bg.png');
+		background: #1485CC;
 		color: #000305;
 		font-size: 87.5%; /* Base font size: 14px */
-		font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
 		line-height: 1.429;
 		margin: 0;
 		padding: 0;
@@ -41,19 +32,29 @@
 	a {outline: 0;}
 	a img {border: 0px; text-decoration: none;}
 	a:link, a:visited {
-		color: #C74350;
+		color: white;
 		padding: 0 1px;
 		text-decoration: underline;
 	}
+	
 	a:hover, a:active {
-		background-color: #C74350;
-		color: #fff;
+		background-color: #C20202;
+		color: #FFF;
 		text-decoration: none;
 		text-shadow: 1px 1px 1px #333;
 	}
+	
+	a.plain:hover {
+		color: #000;
+		text-decoration: none;
+	}
+	
  
 /* Paragraphs */
-	p {margin-bottom: 1.143em;}
+	p {
+		margin-bottom: 1.143em;
+		font-weight: normal;
+	}
 	* p:last-child {margin-bottom: 0;}
 	 
 	strong, b {font-weight: bold;}
@@ -86,20 +87,20 @@
 /* Tables */
 	table {margin: .5em auto 1.5em auto; width: 98%;}
  
-		/* Thead */
-		thead th {padding: .5em .4em; text-align: left;}
-		thead td {}
-	 
-		/* Tbody */
-		tbody td {padding: .5em .4em;}
-		tbody th {}
-	 
-		tbody .alt td {}
-		tbody .alt th {}
-	 
-		/* Tfoot */
-		tfoot th {}
-		tfoot td {}
+	/* Thead */
+	thead th {padding: .5em .4em; text-align: left;}
+	thead td {}
+ 
+	/* Tbody */
+	tbody td {padding: .5em .4em;}
+	tbody th {}
+ 
+	tbody .alt td {}
+	tbody .alt th {}
+ 
+	/* Tfoot */
+	tfoot th {}
+	tfoot td {}
 	
 /* Misc */	
 	* p:last-child {margin-bottom: 0;}
@@ -128,7 +129,7 @@
 	/* Banner */
 	#banner h1 {font-size: 3.571em; line-height: .6;}
 	#banner h1 a:link, #banner h1 a:visited {
-		color: #000305;
+		color: #FFF;
 		display: block;
 		font-weight: bold;
 		margin: 0 0 .6em .2em;
@@ -138,22 +139,23 @@
 	
 	#banner h1 a:hover, #banner h1 a:active {
 		background: none;
-		color: #C74350;
-		text-shadow: none;
+		text-shadow: 5px;
 	}
  
 	#banner h1 strong {font-size: 0.36em; font-weight: normal;}
 	
 	p.welcome {
 		float: left;
-		color: white;
-		padding: 10px 20px 0 10px;
+		color: #FFF;
+		font-size: 1em;
+		font-weight: bold;
+		padding: 5px 20px 0 0;
 	}
 	
 	img.logo {
 		float: left;
-		margin-top: -10px;
-		padding: 0 20px 0 0;
+		margin-top: -15px;
+		padding: 0 15px 0 0;
 	}
 	
 /* Main Nav */
@@ -163,17 +165,17 @@
 		height: 40px;
 		line-height: 30px;
 		margin: 0 auto 2em auto;
-		padding: 0;
+		padding: 0 0 0 100px;
 		text-align: center;
-		width: 800px;
+		width: 700px;
 		
 		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
 	
-	#banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
-	#banner nav li {float: left; display: inline; margin: 0;}
+	#banner nav ul {list-style: none; margin: 0 auto; width: 700px;}
+	#banner nav li {float: right; display: inline; margin: 0;}
 	
 	#banner nav a:link, #banner nav a:visited {
 		color: #fff;
@@ -185,24 +187,24 @@
 	
 	#banner nav a:hover, #banner nav a:active,
 	#banner nav .active a:link, #banner nav .active a:visited {
-		background: #C74451;
+		background: #D62329;
 		color: #fff;
 		text-shadow: none !important;
 	}
-	
+
 	#banner nav li:first-child a {
-		border-top-left-radius: 5px;
-		-moz-border-radius-topleft: 5px;
-		-webkit-border-top-left-radius: 5px;
-		
-		border-bottom-left-radius: 5px;
-		-moz-border-radius-bottomleft: 5px;
-		-webkit-border-bottom-left-radius: 5px;
-	}
+	border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	} 
 	
 /* Featured *****************/
 	#featured {
-		background: #fff;
+		background: #FFF;
 		margin-bottom: 2em;
 		overflow: hidden;
 		padding: 20px;
@@ -216,12 +218,12 @@
 	#featured figure {
 		border: 2px solid #eee;
 		float: right;
-		margin: 0.786em 2em 0 5em;
-		width: 248px;
+		margin: 0 2em 0 5em;
+		width: 200px;
 	}
 	#featured figure img {display: block; float: right;}
 	 
-	#featured h2 {color: #C74451; font-size: 1.714em; margin-bottom: 0.333em;}
+	#featured h2 {color: #C20202; font-size: 1.714em; margin-bottom: 0.333em;}
 	#featured h3 {font-size: 1.429em; margin-bottom: .5em;}
 	 
 	#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
@@ -238,4 +240,30 @@
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-}
+	}
+	
+/* About *****************/
+	#about {
+		background: #fff;
+		font-style: normal;
+		margin-bottom: 2em;
+		overflow: hidden;
+		padding: 20px;
+		text-align: left;
+		width: 760px;
+	 
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+	 
+	#about .primary {float: left; width: 150px;}
+	#about .primary strong {color: #C20202; display: block; font-size: 1.286em;}
+	#about .photo {float: left; margin: 5px 10px;}
+	 
+	#about .url:link, #about .url:visited {text-decoration: none;}
+	 
+	#about .bio {float: right; width: 250px;}
+ 
+/*	Footer *****************/
+	#contentinfo {padding-bottom: 2em; text-align: right;}

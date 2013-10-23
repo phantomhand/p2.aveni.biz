@@ -2,8 +2,9 @@
 @import url("reset.css");
 @import url("global-forms.css");
  
-/***** Global *****/
-/* Body */
+/***** Global *****************/
+
+/* Body *****/
 	body {
 		background: #1485CC;
 		color: #000305;
@@ -47,8 +48,7 @@
 	a.plain:hover {
 		color: #000;
 		text-decoration: none;
-	}
-	
+	}	
  
 /* Paragraphs */
 	p {
@@ -114,19 +114,19 @@
 		display: block;
 	}
 
-/***** Layout *****/
+/***** Layout *****************/
 	.body {clear: both; margin: 0 auto; width: 800px;}
 	img.right figure.right {float: right; margin: 0 0 2em 2em;}
 	img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 		
-/* Header *****************/
+/* Header *****/
 	#banner {
 		margin: 0 auto;
 		padding: 2.5em 0 0 0;
 	}
 	 
-	/* Banner */
+/* Banner */
 	#banner h1 {font-size: 3.571em; line-height: .6;}
 	#banner h1 a:link, #banner h1 a:visited {
 		color: #FFF;
@@ -142,7 +142,7 @@
 		text-shadow: 5px;
 	}
  
-	#banner h1 strong {font-size: 0.36em; font-weight: normal;}
+	#banner h1 strong {font-size: 0.36em;}
 	
 	p.welcome {
 		float: left;
@@ -193,16 +193,47 @@
 	}
 
 	#banner nav li:first-child a {
-	border-top-right-radius: 4px;
-	-moz-border-radius-topright: 4px;
-	-webkit-border-top-right-radius: 4px;
-	
-	border-bottom-right-radius: 4px;
-	-moz-border-radius-bottomright: 4px;
-	-webkit-border-bottom-right-radius: 4px;
+		border-top-right-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
 	} 
 	
-/* Featured *****************/
+/* Home Page */
+	.signup {
+		float: left;
+		height: 160px;
+		width: 345px;
+		padding-right: 50px;
+		
+	}
+	
+	.login {
+		float: right;
+		height: 160px;
+		width: 360px;
+	}
+	
+	
+	/* styling homepage buttons
+	
+	button, submit {
+		color: #FFF;
+		background-color: #D62329;				
+	}
+	
+	input {
+		height: 20px;
+		width: 200px;
+	}
+	
+	*/
+	
+	
+/* Featured *****/
 	#featured {
 		background: #FFF;
 		margin-bottom: 2em;
@@ -229,20 +260,20 @@
 	#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
 	#featured h3 a:hover, #featured h3 a:active {color: #fff;}
  
-/* Body *****************/
+/* Body */
 	#content {
-	background: #fff;
-	margin-bottom: 2em;
-	overflow: hidden;
-	padding: 20px 20px;
-	width: 760px;
- 
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+		background: #fff;
+		margin-bottom: 2em;
+		overflow: hidden;
+		padding: 20px 20px;
+		width: 760px;
+	 
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
 	}
 	
-/* About *****************/
+/* About */
 	#about {
 		background: #fff;
 		font-style: normal;
@@ -263,7 +294,7 @@
 	 
 	#about .url:link, #about .url:visited {text-decoration: none;}
 	 
-	#about .bio {float: right; width: 250px;}
+	#about .bio {float: right; width: 320px; padding: 0 40px 0 0; font-weight: normal;}
  
-/*	Footer *****************/
+/* Footer *****/
 	#contentinfo {padding-bottom: 2em; text-align: right;}

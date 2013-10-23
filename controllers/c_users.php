@@ -82,7 +82,7 @@ class users_controller extends base_controller {
 	    # Login passed
 	    else {
 	        setcookie("token", $token, strtotime('+2 weeks'), '/');
-	        Router::redirect("/");
+	        Router::redirect("/users/profile");
 	    } //end else
 
 	}

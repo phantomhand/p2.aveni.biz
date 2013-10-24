@@ -233,6 +233,33 @@
 	*/
 	
 	
+/* Posts *****/
+
+	.blab {
+		border: #DDD solid 1px;
+		background-color: #EFEFEF;
+		padding: 8px 0 5px 8px;
+		margin-bottom: 10px;
+	}
+	
+	.avatar {
+		float: left;
+		height: 80px;
+		width: 80px;
+		border: #DDD solid 1px;
+		margin-right: 10px;
+	}
+	
+	.postusername {
+		padding-bottom: 5px;
+	}
+	
+	time {
+		font-size: x-small;
+	}
+	
+	
+	
 /* Featured *****/
 	#featured {
 		background: #FFF;

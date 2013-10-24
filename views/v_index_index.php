@@ -14,10 +14,10 @@
 			
 		 	<form method='POST' action='/users/p_login'>
 			    <p>Email<br>
-			    <input type='text' name='email' style="height: 15px; width: 200px; margin-bottom: 5px;">
+			    <input type='email' name='email' style="height: 15px; width: 200px; margin-bottom: 5px;" required title="Must be a valid email address">
 			    <br>		
 			    Password<br>
-			    <input type='password' name='password' style="height: 15px; width: 200px;">
+			    <input type='password' name='password' style="height: 15px; width: 200px;" required>
 			    <br>
 			    </p>
 		    

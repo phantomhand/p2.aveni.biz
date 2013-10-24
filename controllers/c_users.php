@@ -3,7 +3,6 @@ class users_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        #echo "users_controller construct called<br><br>";
     } 
 
     public function index() {
@@ -20,12 +19,7 @@ class users_controller extends base_controller {
     }
 
     public function p_signup() {
-        # Dump out the results of POST to see what the form submitted
-        // echo '<pre>';
-        // print_r($_POST);
-        // echo '</pre>';  
-	    
-	    # More data we want stored with the user
+ 	    # More data we want stored with the user
 	    $_POST['created']  = Time::now();
 	    $_POST['modified'] = Time::now();
 	    
@@ -37,10 +31,6 @@ class users_controller extends base_controller {
 	    
 	    # Insert this user into the database
 	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
-		
-	    # For now, just confirm they've signed up - 
-	    # You should eventually make a proper View for this
-	    # echo 'You\'re signed up!'; 
 	    
 	    # Redirect to the login page
 	    Router::redirect("/users/login");	    	           
@@ -77,8 +67,8 @@ class users_controller extends base_controller {
 	    if(!$token) {
 	        # Note the addition of the parameter "error"
 	        Router::redirect("/users/login/error");
- 
 	    }
+	    
 	    # Login passed
 	    else {
 	        setcookie("token", $token, strtotime('+2 weeks'), '/');
@@ -105,7 +95,7 @@ class users_controller extends base_controller {
 	    Router::redirect("/");
     }
 
-    public function profile($user_name = NULL) {   
+    public function profile($user_name = NULL) {     	  
     	# Set up the View
     	$this->template->content = View::instance('v_users_profile');
     	$this->template->title = "Profile";

@@ -1,7 +1,7 @@
 <aside id="featured" class="body">
 	<article>
 		<figure>
-			<img src="../images/avatar-female.png" alt="Blabbr User Pic" height="200" width="200" />
+			<img src="../images/avatar-question.jpg" alt="Blabbr User Pic" height="200" width="200" />
 		</figure>
 			<hgroup>
 				<h2><?=$user->first_name?>'s Profile</h2>

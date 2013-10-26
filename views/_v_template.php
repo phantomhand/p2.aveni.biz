@@ -28,7 +28,7 @@
 		        <?php if($user): ?>
 		        <li><a href='/users/logout'>Logout</a></li>
 		        <li><a href='/users/profile'>Profile</a></li>
-		        <li><a href=''>Stream</a></li>
+		        <li><a href='/posts'>Stream</a></li>
 		        	<p class="welcome">Welcome<?php if($user) echo ', '.$user->first_name; ?></p>
 				
 				

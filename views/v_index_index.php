@@ -6,7 +6,7 @@
 						
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium orci a molestie commodo. Aliquam sed metus libero. Maecenas adipiscing tempus accumsan.</p>
 			
-			<button type="button" href="users/signup">Sign up</button>
+			<input type="submit" value="Sign up"><a href="/users/signup">Sign up</a></button>
 		</div>
 		
 		<div class="login">

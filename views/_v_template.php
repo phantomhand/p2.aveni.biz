@@ -28,9 +28,7 @@
 		        <?php if($user): ?>
 		        <li><a href='/users/logout'>Logout</a></li>
 		        <li><a href='/users/profile'>Profile</a></li>
-		        <li><a href='/posts'>Stream</a></li>
-		        	<p class="welcome">Welcome<?php if($user) echo ', '.$user->first_name; ?></p>
-				
+		        <li><a href='/posts'>Stream</a></li>				
 				
 				<!-- Menu options for users who are not logged in -->
 		        <?php else: ?>
@@ -39,6 +37,7 @@
 				<li><a href=''>About</a></li>
 		        <?php endif; ?>
 		        
+		        <p class="welcome">Hi<?php if($user) echo ', '.$user->first_name; ?></p>
 		        <li><!--class="active"--><a href='/'>Home</a></li>
 			</ul>
 		</nav><!-- End Navigation -->
@@ -55,12 +54,19 @@
 	<footer id="contentinfo" class="body">
 		<address id="about" class="vcard body">
 		<span class="primary">
-				<p style="margin-top: -10px;"><strong><?=APP_NAME?></strong></p>
-			<span class="role">Blah Blah Blah Blah</span>
+			<p><strong><?=APP_NAME?></strong></p>
+				<img src="../images/blabbr-logo-sm-speech-long.png" alt="Blabbr logo" class="footericon" />
+			<span class="speech">Blabbr is the place for you to tell everyone what you're thinking, as though anybody actually cares!</span>
 		</span><!-- /.primary -->
 	
-		<img src="../images/blabbr-logo-sm.png" alt="Blabbr logo" class="photo" />
-			<span class="bio">Blabbr is the place for you to tell everyone what you're thinking, as though anybody actually cares!</span>
+		
+			<span class="features"><strong>Now with bonus features!</strong><br>
+								<ul>
+									<li>Add a photo to your profile!</li>
+									<li>Edit or delete your embarrassing Blabs!</li>
+									<li>More cool stuff!</li>
+								</ul>
+			</span>
 	
 			</address><!-- /#about -->
 		<p>© 2013 Frank Aveni</p>

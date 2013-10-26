@@ -119,7 +119,12 @@
 	}
 
 /***** Layout *****************/
-	.body {clear: both; margin: 0 auto; width: 800px;}
+	.body {
+		clear: both; 
+		margin: 0 auto; 
+		width: 800px;
+	}
+	
 	img.right figure.right {float: right; margin: 0 0 2em 2em;}
 	img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
@@ -178,8 +183,17 @@
 		-webkit-border-radius: 5px;
 	}
 	
-	#banner nav ul {list-style: none; margin: 0 auto; width: 700px;}
-	#banner nav li {float: right; display: inline; margin: 0;}
+	#banner nav ul {
+		list-style: none; 
+		margin: 0 auto; 
+		width: 700px;
+	}
+	
+	#banner nav li {
+		float: right; 
+		display: inline; 
+		margin: 0;
+	}
 	
 	#banner nav a:link, #banner nav a:visited {
 		color: #fff;
@@ -199,8 +213,7 @@
 	#banner nav li:first-child a {
 		border-top-right-radius: 4px;
 		-moz-border-radius-topright: 4px;
-		-webkit-border-top-right-radius: 4px;
-		
+		-webkit-border-top-right-radius: 4px;		
 		border-bottom-right-radius: 4px;
 		-moz-border-radius-bottomright: 4px;
 		-webkit-border-bottom-right-radius: 4px;
@@ -238,7 +251,6 @@
 	
 	
 /* Posts *****/
-
 	.blab {
 		border: #DDD solid 1px;
 		background-color: #EFEFEF;
@@ -270,8 +282,7 @@
 		margin-bottom: 2em;
 		overflow: hidden;
 		padding: 20px;
-		width: 760px;
-	 
+		width: 760px; 
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
@@ -283,9 +294,15 @@
 		margin: 0 2em 0 5em;
 		width: 200px;
 	}
+	
 	#featured figure img {display: block; float: right;}
 	 
-	#featured h2 {color: #C20202; font-size: 1.714em; margin-bottom: 0.333em;}
+	#featured h2 {
+		color: #C20202; 
+		font-size: 1.714em; 
+		margin-bottom: 0.333em;
+	}
+		
 	#featured h3 {font-size: 1.429em; margin-bottom: .5em;}
 	 
 	#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
@@ -293,12 +310,11 @@
  
 /* Body */
 	#content {
-		background: #fff;
+		background: #FFF;
 		margin-bottom: 2em;
 		overflow: hidden;
 		padding: 20px 20px;
-		width: 760px;
-	 
+		width: 760px;	 
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
@@ -306,26 +322,46 @@
 	
 /* About */
 	#about {
-		background: #fff;
+		background: #000;
 		font-style: normal;
 		margin-bottom: 2em;
 		overflow: hidden;
 		padding: 20px;
 		text-align: left;
 		width: 760px;
-	 
+		height: 89px; 
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
 	}
 	 
-	#about .primary {float: left; width: 150px;}
-	#about .primary strong {color: #C20202; display: block; font-size: 1.286em;}
-	#about .photo {float: left; margin: 5px 10px;}
+	#about .primary {float: left; width: 450px;}
+	
+	#about .primary strong {
+		color: #FFF; 
+		display: block; 
+		font-size: 1.286em; 
+		margin-top: -5px;
+	}
+	
+	#about .footericon {float: left; margin: -45px 10px 10px -5px;}
 	 
 	#about .url:link, #about .url:visited {text-decoration: none;}
+	
+	#about .speech {
+		float: left; 
+		width: 275px; 
+		margin: -91px 0 0 108px;
+	} 
 	 
-	#about .bio {float: right; width: 320px; padding: 0 40px 0 0; font-weight: normal;}
+	#about .features {
+		float: left; 
+		width: 295px; 
+		padding: 0 10px 0 0; 
+		font-weight: normal; 
+		color: #FFF; 
+		margin-top: -5px;}
  
 /* Footer *****/
-	#contentinfo {padding-bottom: 2em; text-align: right;}
+	#contentinfo {
+		padding-bottom: 2em; text-align: right;}

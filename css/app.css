@@ -6,8 +6,8 @@
 
 /* Body *****/
 	body {
-		background: #1485CC;
-		color: #000305;
+		background: #AAA;
+		color: #000305; /*1485CC*/
 		font-size: 87.5%; /* Base font size: 14px */
 		font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
 		line-height: 1.429;
@@ -48,10 +48,6 @@
 	a.plain:hover {
 		color: #000;
 		text-decoration: none;
-	}
-	
-	a.follow{
-		color: red;
 	}	
  
 /* Paragraphs */
@@ -220,6 +216,9 @@
 	} 
 	
 /* Home Page */
+
+	.home {height: 220px;}
+	
 	.signup {
 		float: left;
 		height: 160px;
@@ -234,23 +233,49 @@
 		width: 360px;
 	}
 	
-	
-	/* styling homepage buttons
-	
-	button, submit {
-		color: #FFF;
-		background-color: #D62329;				
+	.button {
+		font-size: 87.5%;
+	    padding: 5px 15px;
+	    text-decoration: none;
+	    background: #C20202;
+	    color: #FFF;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	    border: solid 1px #BB0202;
+	    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    -webkit-transition-duration: 0.2s;
+	    -moz-transition-duration: 0.2s;
+	    transition-duration: 0.2s;
+	    -webkit-user-select:none;
+	    -moz-user-select:none;
+	    -ms-user-select:none;
+	    user-select:none;
+	}
+	.button:hover {
+	    background: #991212;
+	    border: solid 1px #BB0202;
+	    text-decoration: none;
+	}
+	.button:active {
+	    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    background: #2E5481;
+	    border: solid 1px #203E5F;
 	}
 	
-	input {
-		height: 20px;
-		width: 200px;
+	.input {
+		height: 15px;
+		width: 200px; 
+		margin-bottom: 5px;
 	}
 	
-	*/
 	
-	
-/* Posts *****/
+/* Posts & User Listing*****/
 	.blab {
 		border: #DDD solid 1px;
 		background-color: #EFEFEF;
@@ -266,6 +291,14 @@
 		margin-right: 10px;
 	}
 	
+	.avatar-mini {
+		float: left;
+		height: 40px;
+		width: 40px;
+		border: #DDD solid 1px;
+		margin-right: 10px;
+	}
+	
 	.postusername {
 		padding-bottom: 5px;
 	}
@@ -274,7 +307,51 @@
 		font-size: x-small;
 	}
 	
+	.userlisting {
+		border: #DDD solid 1px;
+		background-color: #EFEFEF;
+		padding: 8px 10px 5px 8px;
+		margin-bottom: -30px;
+		height: 45px;
+	}
 	
+	a.followbutton {
+		float: right;
+		font-size: 87.5%;
+	    padding: 5px 15px;
+	    margin-top: 5px;
+	    text-decoration: none;
+	    background: #C20202;
+	    color: #FFF;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	    border: solid 1px #BB0202;
+	    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	    -webkit-transition-duration: 0.2s;
+	    -moz-transition-duration: 0.2s;
+	    transition-duration: 0.2s;
+	    -webkit-user-select:none;
+	    -moz-user-select:none;
+	    -ms-user-select:none;
+	    user-select:none;
+	}
+	.followbutton:hover {
+	    background: #991212;
+	    border: solid 1px #BB0202;
+	    text-decoration: none;
+	}
+	.followbutton:active {
+	    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    background: #2E5481;
+	    border: solid 1px #203E5F;
+	}
+		
 	
 /* Featured *****/
 	#featured {

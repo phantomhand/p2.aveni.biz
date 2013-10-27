@@ -38,7 +38,7 @@ class users_controller extends base_controller {
 
     public function login($error = NULL) {
 	    # Set up the view
-	    $this->template->content = View::instance("v_users_login");
+	    $this->template->content = View::instance("v_index_index");
 	
 	    # Pass data to the view
 	    $this->template->content->error = $error;

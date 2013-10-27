@@ -5,7 +5,7 @@
 	    <label for='content'>Blab away:</label><br>
 	    <textarea style="width: 715px;" name='content' id='content'></textarea>
 	
-	    <input type='submit' value='Add new Blab'>
+	    <input type='submit' value='Add new Blab' class="button">
 
 	</form>
 	

@@ -5,19 +5,19 @@
 			<h2>Sign Up</h2>
 			
 		    First Name<br>
-		    <input type='text' name='first_name'>
+		    <input type='text' name='first_name' class="input">
 		    <br><br>
 		
 		    Last Name<br>
-		    <input type='text' name='last_name'>
+		    <input type='text' name='last_name' class="input">
 		    <br><br>
 		
 		    Email<br>
-		    <input type='text' name='email'>
+		    <input type='text' name='email' class="input">
 		    <br><br>
 		
 		    Password<br>
-		    <input type='password' name='password'>
+		    <input type='password' name='password' class="input">
 		    <br><br>
 		
 		    <input type='submit' value='Sign up'>

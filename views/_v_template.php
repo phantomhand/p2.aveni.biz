@@ -28,17 +28,21 @@
 		        <?php if($user): ?>
 		        <li><a href='/users/logout'>Logout</a></li>
 		        <li><a href='/users/profile'>Profile</a></li>
-		        <li><a href='/posts'>Stream</a></li>				
+		        <li><a href='/posts'>Stream</a></li>
+		        <li><a href='/posts/users'>Blabbrs</a></li>				
 				
 				<!-- Menu options for users who are not logged in -->
 		        <?php else: ?>
 				<li><a href='/users/signup'>Sign up</a></li>
 				<li><a href='/users/login'>Log in</a></li>
-				<li><a href=''>About</a></li>
+				<li><a href='/about'>About</a></li>
+				
+				<li><a href='/'>Home</a></li>
 		        <?php endif; ?>
 		        
+		        <?php if($user): ?>
 		        <p class="welcome">Hi<?php if($user) echo ', '.$user->first_name; ?></p>
-		        <li><!--class="active"--><a href='/'>Home</a></li>
+		        <?php endif; ?>
 			</ul>
 		</nav><!-- End Navigation -->
 </header><!-- /#banner -->

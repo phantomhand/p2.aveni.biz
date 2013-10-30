@@ -11,14 +11,44 @@ class users_controller extends base_controller {
 
     public function signup() {
         # Setup view
-            $this->template->content = View::instance('v_users_signup');
-            $this->template->title   = "Sign Up";
+        $this->template->content = View::instance('v_users_signup');
+        $this->template->title   = "Sign Up";
 
         # Render template
-            echo $this->template;
+        echo $this->template;
     }
-
-    public function p_signup() {
+	 
+    public function p_signup($error = NULL)  {
+    
+    	# Set up the view
+	    $this->template->content = View::instance("v_users_signup");
+	
+	    # Pass data to the view
+	    $this->template->content->error = $error;
+	
+	    # Render the view
+	    echo $this->template;   
+    	
+    	/* IN PROGRESS ********************* 
+    	#Prevent duplicate users 
+    	$q = "SELECT token 
+	        FROM users 
+	        WHERE email = '".$_POST['email']."' 
+	        AND password = '".$_POST['password']."'";
+    		 	
+    	$dup = DB::instance(DB_NAME)->select_field($q);
+	
+	    # Sign up failed
+	    if(!$dup) {
+	        # Note the addition of the parameter "error"
+	        Router::redirect("/users/signup/error");
+	    }
+	    
+	   	#Sign up passed
+		else { 
+    	
+    	*/
+    		    
  	    # More data we want stored with the user
 	    $_POST['created']  = Time::now();
 	    $_POST['modified'] = Time::now();
@@ -31,15 +61,17 @@ class users_controller extends base_controller {
 	    
 	    # Insert this user into the database
 	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
-	    
+	    	
 	    # Redirect to the login page
-	    Router::redirect("/users/login");	    	           
+	    Router::redirect("/users/login");
+	    
+	   /* } */	 	           
     }
 
     public function login($error = NULL) {
 	    # Set up the view
 	    $this->template->content = View::instance("v_index_index");
-	
+		
 	    # Pass data to the view
 	    $this->template->content->error = $error;
 	
@@ -124,5 +156,21 @@ class users_controller extends base_controller {
 	    # Render template
 	    echo $this->template;
 	}	
+	
+	public function add_image(){               
+        #Upload image
+        Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "jpeg", "gif", "png"), 'avatar-'.$this->user->user_id);
+        
+        # Associate this post with this user
+        $_FILES['user_id']  = $this->user->user_id;
+
+        # Insert
+        # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
+        DB::instance(DB_NAME)->insert('image', $_FILES);
+
+        
+        #Refresh profile
+        Router::redirect('/users/profile');
+ 	}
 
 } # end of the class

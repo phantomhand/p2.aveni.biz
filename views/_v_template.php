@@ -19,7 +19,7 @@
 <header id="banner" class="body">
 	<img src="../images/blabbr-logo.png" alt="Blabbr logo" class="logo" width="200" height="147"/>
 		<h1><a href="/">Blabbr<br></a></h1>
-		<p><strong>Pretend anybody cares!<strong></p>
+		<p><strong>Don't just think it... Blab it!<strong></p>
 	
 		<!-- Navigation -->
 		<nav>

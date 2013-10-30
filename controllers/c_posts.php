@@ -30,12 +30,9 @@ class posts_controller extends base_controller {
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
         DB::instance(DB_NAME)->insert('posts', $_POST);
-
-        # Quick and dirty feedback
-        # echo "Your post has been added. <a href='/posts/add'>Add another</a>";
         
         # Redirect to same page (to refresh)
-	        Router::redirect("/posts");
+	    Router::redirect("/posts");
         
     }
     
@@ -57,7 +54,8 @@ class posts_controller extends base_controller {
             ON posts.user_id = users_users.user_id_followed
         INNER JOIN users 
             ON posts.user_id = users.user_id
-        WHERE users_users.user_id = '.$this->user->user_id;
+        WHERE users_users.user_id = '.$this->user->user_id .'
+        ORDER BY posts.created DESC';
 	
 	    # Run the query
 	    $posts = DB::instance(DB_NAME)->select_rows($q);
@@ -77,7 +75,8 @@ class posts_controller extends base_controller {
 	
 	    # Build the query to get all the users
 	    $q = "SELECT *
-	        FROM users";
+	        FROM users
+	        ORDER by last_name";
 	
 	    # Execute the query to get all the users. 
 	    # Store the result array in the variable $users

@@ -8,6 +8,7 @@
 			
 			<form method='POST' action='/users/signup'><input type="submit" value="Sign up" class="button">
 			</form>
+		    
 		</div>
 		
 		<div class="login">
@@ -30,7 +31,8 @@
 		    <?php if (isset ($error) ): ?>
 		        <div class='error' style="color: red;">
 		            <p><strong>Login failed.<br>
-		            Please check your email and password.</strong></p> 
+		            Please check your email and password.</strong></p>
+		            <?php echo $error ?>
 		        </div>
 		        <br>
 		    <?php endif; ?>

@@ -30,19 +30,24 @@
 	}
  
 /* Anchors */
-	a {outline: 0;}
-	a img {border: 0px; text-decoration: none;}
+	a {
+		outline: 0;
+	}
+	
+	a img {
+		border: 0px; 
+		text-decoration: none;
+	}
+	
 	a:link, a:visited {
-		color: white;
+		color: #C20202;
 		padding: 0 1px;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 	
 	a:hover, a:active {
-		background-color: #C20202;
-		color: #FFF;
-		text-decoration: none;
-		text-shadow: 1px 1px 1px #333;
+		color: #C20202;
+		text-decoration: underline;
 	}
 	
 	a.plain:hover {
@@ -55,13 +60,28 @@
 		margin-bottom: 1.143em;
 		font-weight: normal;
 	}
-	* p:last-child {margin-bottom: 0;}
+	
+	p:last-child {
+		margin-bottom: 0;
+	}
 	 
-	strong, b {font-weight: bold;}
-	em, i {font-style: italic;}
+	strong, b {
+		font-weight: bold;
+	}
+	
+	em, i {
+		font-style: italic;
+	}
 	 
-	::-moz-selection {background: #F6CF74; color: #fff;}
-	::selection {background: #F6CF74; color: #fff;}
+	::-moz-selection {
+		background: #F6CF74; 
+		color: #fff;
+	}
+	
+	::selection {
+		background: #F6CF74; 
+		color: #fff;
+	}
  
 /* Lists */
 	ul {
@@ -74,39 +94,62 @@
 		margin: 1em 0 1.5em 1.5em;
 	}
  
-	dl {margin: 0 0 1.5em 0;}
-	dt {font-weight: bold;}
-	dd {margin-left: 1.5em;}
+	dl {
+		margin: 0 0 1.5em 0;
+	}
+	
+	dt {
+		font-weight: bold;
+	}
+	
+	dd {
+		margin-left: 1.5em;
+	}
  
+/* NOT USING ******************************************************************* CLEAN ME UP !!!! */
 /* Quotes */
-	blockquote {font-style: italic;}
-	cite {}
+	/*blockquote, cite {
+	font-style: italic;
+	}
 	 
 	q {}
+*/
  
 /* Tables */
-	table {margin: .5em auto 1.5em auto; width: 98%;}
+	/* table {
+		margin: .5em auto 1.5em auto; width: 98%;
+	}
  
 	/* Thead */
-	thead th {padding: .5em .4em; text-align: left;}
-	thead td {}
+	/*thead th {padding: .5em .4em; text-align: left;}
+	/*thead td {}
  
 	/* Tbody */
-	tbody td {padding: .5em .4em;}
-	tbody th {}
+	/*tbody td {padding: .5em .4em;}
+	/*tbody th {}
  
-	tbody .alt td {}
-	tbody .alt th {}
+	/*tbody .alt td {}
+	/*tbody .alt th {}
  
 	/* Tfoot */
-	tfoot th {}
-	tfoot td {}
+	/*tfoot th {}
+	/*tfoot td {}
+/*
 	
 /* Misc */	
-	* p:last-child {margin-bottom: 0;}
+	* p:last-child {
+		margin-bottom: 0;
+	}
 	
-	::-moz-selection {background: #F6CF74; color: #fff;}
-	::selection {background: #F6CF74; color: #fff;}
+	::-moz-selection {
+		background: #F6CF74; 
+		color: #fff;
+	}
+	
+	::selection {
+		background: #F6CF74; 
+		color: #fff;
+	}
 	
 	/* HTML5 tags */
 	header, section, footer,
@@ -121,8 +164,15 @@
 		width: 800px;
 	}
 	
-	img.right figure.right {float: right; margin: 0 0 2em 2em;}
-	img.left, figure.left {float: right; margin: 0 0 2em 2em;}
+	img.right figure.right {
+		float: right; 
+		margin: 0 0 2em 2em;
+	}
+	
+	img.left, figure.left {
+		float: right; 
+		margin: 0 0 2em 2em;
+	}
 
 		
 /* Header *****/
@@ -132,7 +182,11 @@
 	}
 	 
 /* Banner */
-	#banner h1 {font-size: 3.571em; line-height: .6;}
+	#banner h1 {
+		font-size: 3.571em; 
+		line-height: .6;
+	}
+	
 	#banner h1 a:link, #banner h1 a:visited {
 		color: #FFF;
 		display: block;
@@ -147,7 +201,9 @@
 		text-shadow: 5px;
 	}
  
-	#banner h1 strong {font-size: 0.36em;}
+	#banner h1 strong {
+		font-size: 0.36em;
+	}
 	
 	p.welcome {
 		float: left;
@@ -217,7 +273,9 @@
 	
 /* Home Page */
 
-	.home {height: 220px;}
+	.home {
+		height: 220px;
+	}
 	
 	.signup {
 		float: left;
@@ -233,7 +291,61 @@
 		width: 360px;
 	}
 	
-	.button {
+	.input {
+		height: 15px;
+		width: 200px; 
+		margin-bottom: 5px;
+	}
+	
+	
+/* Posts & User Listing*****/
+	.blab {
+		border: #DDD solid 1px;
+		background-color: #EFEFEF;
+		padding: 8px 40px 5px 8px;
+		margin-bottom: 20px;
+	}
+	
+	.avatar {
+		float: left;
+		height: 80px;
+		width: 80px;
+		border: #DDD solid 1px;
+		margin-right: 10px;
+	}
+	
+	.avatar-mini {
+		float: left;
+		height: 40px;
+		width: 40px;
+		border: #DDD solid 1px;
+		margin-right: 10px;
+	}
+	
+	.postusername {
+		padding-bottom: 5px;
+	}
+	
+	p.blabtext {
+		padding-left: 90px;
+	}
+	
+	time {
+		font-size: x-small;
+	}
+	
+	.userlisting {
+		border: #DDD solid 1px;
+		background-color: #EFEFEF;
+		padding: 8px 10px 5px 8px;
+		margin-bottom: -30px;
+		height: 45px;
+	}
+	
+
+/* Buttons *****/
+
+.button {
 		font-size: 87.5%;
 	    padding: 5px 15px;
 	    text-decoration: none;
@@ -268,54 +380,7 @@
 	    border: solid 1px #203E5F;
 	}
 	
-	.input {
-		height: 15px;
-		width: 200px; 
-		margin-bottom: 5px;
-	}
-	
-	
-/* Posts & User Listing*****/
-	.blab {
-		border: #DDD solid 1px;
-		background-color: #EFEFEF;
-		padding: 8px 0 5px 8px;
-		margin-bottom: 20px;
-	}
-	
-	.avatar {
-		float: left;
-		height: 80px;
-		width: 80px;
-		border: #DDD solid 1px;
-		margin-right: 10px;
-	}
-	
-	.avatar-mini {
-		float: left;
-		height: 40px;
-		width: 40px;
-		border: #DDD solid 1px;
-		margin-right: 10px;
-	}
-	
-	.postusername {
-		padding-bottom: 5px;
-	}
-	
-	time {
-		font-size: x-small;
-	}
-	
-	.userlisting {
-		border: #DDD solid 1px;
-		background-color: #EFEFEF;
-		padding: 8px 10px 5px 8px;
-		margin-bottom: -30px;
-		height: 45px;
-	}
-	
-	a.followbutton {
+	a.followbutton, .blabbutton {
 		float: right;
 		font-size: 87.5%;
 	    padding: 5px 15px;
@@ -339,6 +404,7 @@
 	    -ms-user-select:none;
 	    user-select:none;
 	}
+	
 	.followbutton:hover {
 	    background: #991212;
 	    border: solid 1px #BB0202;
@@ -351,7 +417,7 @@
 	    background: #2E5481;
 	    border: solid 1px #203E5F;
 	}
-		
+	
 	
 /* Featured *****/
 	#featured {
@@ -372,7 +438,10 @@
 		width: 200px;
 	}
 	
-	#featured figure img {display: block; float: right;}
+	#featured figure img {
+		display: block; 
+		float: right;
+	}
 	 
 	#featured h2 {
 		color: #C20202; 
@@ -380,10 +449,19 @@
 		margin-bottom: 0.333em;
 	}
 		
-	#featured h3 {font-size: 1.429em; margin-bottom: .5em;}
+	#featured h3 {
+		font-size: 1.429em; 
+		margin-bottom: .5em;
+	}
 	 
-	#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
-	#featured h3 a:hover, #featured h3 a:active {color: #fff;}
+	#featured h3 a:link, #featured h3 a:visited {
+		color: #000305; 
+		text-decoration: none;
+	}
+	
+	#featured h3 a:hover, #featured h3 a:active {
+		color: #fff;
+	}
  
 /* Body */
 	#content {
@@ -412,7 +490,10 @@
 		-webkit-border-radius: 10px;
 	}
 	 
-	#about .primary {float: left; width: 450px;}
+	#about .primary {
+		float: left; 
+		width: 450px;
+	}
 	
 	#about .primary strong {
 		color: #FFF; 
@@ -421,9 +502,14 @@
 		margin-top: -5px;
 	}
 	
-	#about .footericon {float: left; margin: -45px 10px 10px -5px;}
+	#about .footericon {
+		float: left; 
+		margin: -45px 10px 10px -5px;
+	}
 	 
-	#about .url:link, #about .url:visited {text-decoration: none;}
+	#about .url:link, #about .url:visited {
+		text-decoration: none;
+	}
 	
 	#about .speech {
 		float: left; 
@@ -438,7 +524,12 @@
 		font-weight: normal; 
 		color: #FFF; 
 		margin-top: -5px;}
+		
  
 /* Footer *****/
 	#contentinfo {
-		padding-bottom: 2em; text-align: right;}
+		padding-bottom: 2em; 
+		text-align: right;
+	}
+	
+/* END CSS *****/

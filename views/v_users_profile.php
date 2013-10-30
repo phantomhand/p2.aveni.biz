@@ -1,14 +1,20 @@
 <aside id="featured" class="body">
 	<article>
+		
 		<figure>
-			<img src="../uploads/avatars/avatar-<?=$user->user_id?>.png" alt="Blabbr User Pic" height="200" width="200"/>
-			
-			<!-- ../images/avatar-question.jpg-->
-
-			<form method='POST' enctype="multipart/form-data" action='/users/add_image/'>
-				<input type='file' name='image'>
-				<input type='submit' class="button">
-			</form>
+			<?php if (isset ($_FILES) ): ?>
+				<img class="avatar-lg" src="../uploads/avatars/avatar-<?=$user->user_id?>.png" alt="Blabbr User Pic" height="200" width="200"/>
+			<?php endif; ?>			
+				
+			<?php if (is_null ($_FILES) ): ?> 
+				<img class="avatar-lg" src="../images/avatar-question.jpg" alt="Blabbr User Pic" height="200" width="200"/>
+			<?php endif; ?>	
+				<label for="file">Update your profile image</label>
+				<form method='POST' enctype="multipart/form-data" action='/users/add_image/'>
+					<input type='file' name='image'>
+					<input type='submit' class="button">
+				</form>
+			</div>
 		</figure>
 		
 		<hgroup>

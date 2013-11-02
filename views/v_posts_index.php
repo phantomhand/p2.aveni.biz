@@ -15,20 +15,29 @@
 			<h2>Latest Blabs</h2>
 		</hgroup>
 	
-		<?php foreach($posts as $post): ?>	
-			<article class="blab">
-				<img class="avatar" src="../images/avatar-question-sm.jpg"/>
-				
-				<h1 class="postusername"><?=$post['first_name']?> <?=$post['last_name']?></h1>
-					<p class="blabtext"><?=$post['content']?>
+			<?php foreach($posts as $post):?>					
+			
+				<article class="blab">
+					<!-- If set, print this user's image -->
+					<?php if(empty($post['image'])): ?>
+					<img class="avatar" src="../images/avatar-question-sm.jpg" alt="Blabbr User Pic" height="80" width="80"/>
 					
-						<br>
-						<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
-						<?=Time::display($post['created'])?>
-						</time>
-					</p>
-	
-			</article>
-		<?php endforeach; ?>
+					<!-- If not, print the default image -->
+					<?php else: ?>
+					<img class="avatar" src="<?=$post['image']?>"/>
+					<?php endif; ?>
+					
+					<!-- Show the post info and content -->
+					<h1 class="postusername"><?=$post['first_name']?> <?=$post['last_name']?></h1>
+						<p class="blabtext"><?=$post['content']?>
+						
+							<br>
+							<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+							<?=Time::display($post['created'])?>
+							</time>
+						</p>
+				</article>
+			<?php endforeach; ?>
+			
 	</article>
 </section>

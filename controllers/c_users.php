@@ -18,37 +18,16 @@ class users_controller extends base_controller {
         echo $this->template;
     }
 	 
-    public function p_signup($error = NULL)  {
+    public function p_signup($error = NULL) {
+    	# Insert this user into the database
+	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
     
     	# Set up the view
 	    $this->template->content = View::instance("v_users_signup");
 	
 	    # Pass data to the view
-	    $this->template->content->error = $error;
-	
-	    # Render the view
-	    echo $this->template;   
-    	
-    	/* IN PROGRESS ********************* 
-    	#Prevent duplicate users 
-    	$q = "SELECT token 
-	        FROM users 
-	        WHERE email = '".$_POST['email']."' 
-	        AND password = '".$_POST['password']."'";
-    		 	
-    	$dup = DB::instance(DB_NAME)->select_field($q);
-	
-	    # Sign up failed
-	    if(!$dup) {
-	        # Note the addition of the parameter "error"
-	        Router::redirect("/users/signup/error");
-	    }
-	    
-	   	#Sign up passed
-		else { 
-    	
-    	*/
-    		    
+	    $this->template->content->error = $error; 
+    	   		    
  	    # More data we want stored with the user
 	    $_POST['created']  = Time::now();
 	    $_POST['modified'] = Time::now();
@@ -63,14 +42,12 @@ class users_controller extends base_controller {
 	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 	    	
 	    # Redirect to the login page
-	    Router::redirect("/users/login");
-	    
-	   /* } */	 	           
+	    Router::redirect("/users/login"); 	        
     }
 
     public function login($error = NULL) {
 	    # Set up the view
-	    $this->template->content = View::instance("v_index_index");
+	    $this->template->content = View::instance("v_users_login");
 		
 	    # Pass data to the view
 	    $this->template->content->error = $error;
@@ -158,19 +135,44 @@ class users_controller extends base_controller {
 	}	
 	
 	public function add_image(){               
-        #Upload image
-        Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "jpeg", "gif", "png"), 'avatar-'.$this->user->user_id);
-        
-        # Associate this post with this user
+        # Upload image, set $filename variable to file name
+        $filename = Upload::upload($_FILES, "/uploads/avatars/", array("jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif", "GIF"), 
+        'avatar-'.$this->user->user_id);
+   		     
+        # Associate this image with this user
         $_FILES['user_id']  = $this->user->user_id;
+        
+        # Update $filename to include file path to render full URL
+        $filename = "../uploads/avatars/$filename";
+        
+        # Pass filename to database 
+        $data = Array("image"=>$filename);
+              
+        $q = "WHERE user_id = ".$this->user->user_id;
+
+        # Instantiate
+        DB::instance(DB_NAME)->update('users', $data, $q);
+        
+        $this->template->content = View::instance("v_posts_index");
+        
+        # Pass the data to the View
+		$this->template->user->image;
+		      
+        # Refresh profile
+        Router::redirect('/users/profile');
+ 	}
+ 	
+ 	public function p_add_bio() {
+        # Associate this post with this user
+        $_POST['user_id']  = $this->user->user_id;
 
         # Insert
         # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        DB::instance(DB_NAME)->insert('image', $_FILES);
-
+        DB::instance(DB_NAME)->insert('users.bio', $_POST);
         
-        #Refresh profile
-        Router::redirect('/users/profile');
- 	}
+        # Redirect to same page (to refresh)
+	    Router::redirect("/users/profile");       
+    }
+
 
 } # end of the class

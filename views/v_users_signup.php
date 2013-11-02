@@ -4,24 +4,23 @@
 			
 			<h2>Sign Up</h2>
 			
-		    First Name<br>
-		    <input type='text' name='first_name' class="input">
+		    <p><strong>First Name<br>
+		    <input type='text' name='first_name' class="input" required>
 		    <br>
 		
 		    Last Name<br>
-		    <input type='text' name='last_name' class="input">
+		    <input type='text' name='last_name' class="input" required>
 		    <br>
 		
 		    Email<br>
-		    <input type='text' name='email' class="input">
+' name='email' class="input" required title="Must be a valid email address">
 		    <br>
 		
 		    Password<br>
-		    <input type='password' name='password' class="input">
-		    <br>
-		    <br>
+		    <input type='password' name='password' class="input" required>
+		    </strong></p>
 		
-		    <input type='submit' value='Sign up'>
+		    <input type='submit' class="button" value='Sign up'>
 	
 		</form>
 		

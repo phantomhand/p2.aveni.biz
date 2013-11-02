@@ -4,7 +4,8 @@
 		<div class="signup">
 			<h2>Welcome to <?=APP_NAME?>!</h2>
 						
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium orci a molestie commodo. Aliquam sed metus libero. Maecenas adipiscing tempus accumsan.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium orci a molestie commodo. 
+			Aliquam sed metus libero. Maecenas adipiscing tempus accumsan.</p>
 			
 			<form method='POST' action='/users/signup'><input type="submit" value="Sign up" class="button">
 			</form>
@@ -12,6 +13,7 @@
 		</div>
 		
 		<div class="login">
+		
 			<h2>Log In</h2>
 			
 		 	<form method='POST' action='/users/p_login'>

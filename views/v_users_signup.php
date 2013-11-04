@@ -13,7 +13,7 @@
 		    <br>
 		
 		    Email<br>
-			<input type='text'' name='email' class="input" required title="Must be a valid email address">
+			<input type='text' name='email' class="input" required title="Must be a valid email address">
 		    <br>
 		
 		    Password<br>

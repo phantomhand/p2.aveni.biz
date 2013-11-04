@@ -1,8 +1,8 @@
-<section id="content" class="body">
+<aside id="featured" class="body">
 	<article>
 		<form method='POST' action='/posts/p_add'>
 			<label for='content'>Add a new Blab:</label><br>
-			<textarea style="width: 715px;" name='content' id='content'></textarea>
+			<textarea style="width: 715px;" name="content" id='content'></textarea>
 			
 			<input type='submit' value='Blab away!' class="button" style="float: right; margin-top: -12px;">	
 		</form>
@@ -11,20 +11,20 @@
 		<hr>
 		<br>
 		
-		<hgroup>
-			<h2>Latest Blabs</h2>
-		</hgroup>
+		
+		<h2>Latest Blabs</h2>
+		
 	
 			<?php foreach($posts as $post):?>					
 			
 				<article class="blab">
 					<!-- If set, print this user's image -->
 					<?php if(empty($post['image'])): ?>
-					<img class="avatar" src="../images/avatar-question-sm.jpg" alt="Blabbr User Pic" height="80" width="80"/>
+					<img class="avatar" src="../images/avatar-question-sm.jpg" height="80" width="80"  alt="Blabbr user pic"/>
 					
 					<!-- If not, print the default image -->
 					<?php else: ?>
-					<img class="avatar" src="<?=$post['image']?>"/>
+					<img class="avatar" src="<?=$post['image']?>" height="80" width="80"  alt="Blabbr user pic"/>
 					<?php endif; ?>
 					
 					<!-- Show the post info and content -->
@@ -39,5 +39,11 @@
 				</article>
 			<?php endforeach; ?>
 			
+			<?php if (!$posts): ?>
+			        <div style="color: red;">
+			            You're not currently following Blabbrs! Why not <a href="posts/users/">add some</a>?
+			        </div>
+			        <br>
+			<?php endif; ?>
 	</article>
-</section>
+</aside>

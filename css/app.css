@@ -6,14 +6,17 @@
 
 /* Body *****/
 	body {
-		background: #AAA;
-		color: #000305; /*1485CC*/
+		background: #1485CC; /*AAA*/
+		color: #000305;
 		font-size: 87.5%; /* Base font size: 14px */
-		font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
+		font-family: 'Helvetica', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
 		line-height: 1.429;
 		margin: 0;
 		padding: 0;
 		text-align: left;
+		clear: both; 
+		margin: 0 auto; 
+		width: 800px;
 	}
  
 /* Headings */
@@ -105,36 +108,6 @@
 	dd {
 		margin-left: 1.5em;
 	}
- 
-/* NOT USING ******************************************************************* CLEAN ME UP !!!! */
-/* Quotes */
-	/*blockquote, cite {
-	font-style: italic;
-	}
-	 
-	q {}
-*/
- 
-/* Tables */
-	/* table {
-		margin: .5em auto 1.5em auto; width: 98%;
-	}
- 
-	/* Thead */
-	/*thead th {padding: .5em .4em; text-align: left;}
-	/*thead td {}
- 
-	/* Tbody */
-	/*tbody td {padding: .5em .4em;}
-	/*tbody th {}
- 
-	/*tbody .alt td {}
-	/*tbody .alt th {}
- 
-	/* Tfoot */
-	/*tfoot th {}
-	/*tfoot td {}
-/*
 	
 /* Misc */	
 	* p:last-child {
@@ -158,11 +131,6 @@
 	}
 
 /***** Layout *****************/
-	.body {
-		clear: both; 
-		margin: 0 auto; 
-		width: 800px;
-	}
 	
 	img.right figure.right {
 		float: right; 
@@ -173,7 +141,6 @@
 		float: right; 
 		margin: 0 0 2em 2em;
 	}
-
 		
 /* Header *****/
 	#banner {
@@ -183,8 +150,10 @@
 	 
 /* Banner */
 	#banner h1 {
-		font-size: 3.571em; 
+		font-size: 4.571em;
+		font-weight: bold; 
 		line-height: .6;
+		padding-top: 10px;
 	}
 	
 	#banner h1 a:link, #banner h1 a:visited {
@@ -205,11 +174,18 @@
 		font-size: 0.36em;
 	}
 	
+	#tagline {
+	font-size: 1.25em;
+	font-weight: bold;
+	padding-top: 15px;
+	margin: -35px 0 10px 0;	
+	}
+	
 	p.welcome {
 		float: left;
 		color: #FFF;
 		font-size: 1em;
-		font-weight: bold;
+		font-weight: normal;
 		padding: 5px 20px 0 0;
 	}
 	
@@ -279,9 +255,8 @@
 	.signup {
 		float: left;
 		height: 160px;
-		width: 345px;
-		padding-right: 50px;
-		
+		width: 325px;
+		padding: 0 50px 0 15px;
 	}
 	
 	.login {
@@ -324,10 +299,10 @@
 		width: 40px;
 		border: #DDD solid 1px;
 		margin-right: 10px;
-		background-image: url(../images/avatar-question-alpha.png);
 	}
 	
 	.postusername {
+		font-weight: bold;
 		padding-bottom: 5px;
 	}
 	
@@ -479,7 +454,7 @@
 		-webkit-border-radius: 10px;
 	}
 	
-/* About */
+/* Footer *****/
 	#about {
 		background: #000;
 		font-style: normal;
@@ -496,7 +471,7 @@
 	 
 	#about .primary {
 		float: left; 
-		width: 450px;
+		width: 430px;
 	}
 	
 	#about .primary strong {
@@ -504,11 +479,6 @@
 		display: block; 
 		font-size: 1.286em; 
 		margin-top: -5px;
-	}
-	
-	#about .footericon {
-		float: left; 
-		margin: -45px 10px 10px -5px;
 	}
 	 
 	#about .url:link, #about .url:visited {
@@ -518,20 +488,23 @@
 	#about .speech {
 		float: left; 
 		width: 275px; 
-		margin: -91px 0 0 108px;
+		margin: -90px 0 0 98px;
 	} 
+	
+	#about .footericon {
+		float: left; 
+		margin: -30px 10px 10px -5px;
+	}
 	 
 	#about .features {
-		float: left; 
+		float: right; 
 		width: 295px; 
 		padding: 0 10px 0 0; 
 		font-weight: normal; 
 		color: #FFF; 
 		margin-top: -5px;}
 		
- 
-/* Footer *****/
-	#contentinfo {
+	#footerinfo {
 		padding-bottom: 2em; 
 		text-align: right;
 	}

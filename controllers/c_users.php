@@ -18,10 +18,7 @@ class users_controller extends base_controller {
         echo $this->template;
     }
 	 
-    public function p_signup($error = NULL) {
-    	# Insert this user into the database
-	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
-    
+    public function p_signup($error = NULL) {    
     	# Set up the view
 	    $this->template->content = View::instance("v_users_signup");
 	
@@ -165,10 +162,11 @@ class users_controller extends base_controller {
  	public function p_add_bio() {
         # Associate this post with this user
         $_POST['user_id']  = $this->user->user_id;
+        
+        $q = "WHERE user_id = ".$this->user->user_id;
 
-        # Insert
-        # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        DB::instance(DB_NAME)->insert('users.bio', $_POST);
+        # Update
+        DB::instance(DB_NAME)->update('users', $_POST, $q);
         
         # Redirect to same page (to refresh)
 	    Router::redirect("/users/profile");       

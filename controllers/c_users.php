@@ -13,22 +13,25 @@ class users_controller extends base_controller {
         # Setup view
         $this->template->content = View::instance('v_users_signup');
         $this->template->title   = "Sign Up";
-
-        # Render template
+        		
+		# Render template
         echo $this->template;
-    }
+        
+        }
 	 
     public function p_signup($error = NULL) {    
     	# Set up the view
 	    $this->template->content = View::instance("v_users_signup");
 	
 	    # Pass data to the view
-	    $this->template->content->error = $error; 
+	    $this->template->content->error = $error; 	   
     	   		    
  	    # More data we want stored with the user
 	    $_POST['created']  = Time::now();
 	    $_POST['modified'] = Time::now();
 	    
+	    $this->userObj->confirm_unique_email($email);
+	    	    
 		# Encrypt the password  
 	    $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
 	
@@ -140,7 +143,7 @@ class users_controller extends base_controller {
         $_FILES['user_id']  = $this->user->user_id;
         
         # Update $filename to include file path to render full URL
-        $filename = "../uploads/avatars/$filename";
+        $filename = "/uploads/avatars/$filename";
         
         # Pass filename to database 
         $data = Array("image"=>$filename);

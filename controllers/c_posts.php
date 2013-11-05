@@ -35,6 +35,15 @@ class posts_controller extends base_controller {
 	    Router::redirect("/posts");      
     }
     
+    public function p_delete() {
+        # Delete this post
+	    $where_condition = "WHERE post_id =".$_POST["post_id"];
+		DB::instance(DB_NAME)->delete('posts', $where_condition);
+        
+        # Redirect to same page (to refresh)
+	    Router::redirect("/posts");      
+    }   
+    
 	public function index() {	
 	    # Set up the View
 	    $this->template->content = View::instance('v_posts_index');
@@ -44,11 +53,14 @@ class posts_controller extends base_controller {
 	    $q = 'SELECT 
             posts.content,
             posts.created,
+            posts.post_id,
+            posts.user_id,
             posts.user_id AS post_user_id,
             users_users.user_id AS follower_id,
             users.first_name,
             users.last_name,
-            users.image
+            users.image,
+            users.user_id
         FROM posts
         INNER JOIN users_users 
             ON posts.user_id = users_users.user_id_followed

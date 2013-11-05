@@ -19,7 +19,7 @@
 <body id="index" class="home">
 
 <header id="banner">
-	<img src="../images/blabbr-logo.png" alt="Blabbr logo" class="logo" width="200" height="147"/>
+	<img src="/images/blabbr-logo.png" alt="Blabbr logo" class="logo" width="200" height="147"/>
 		<h1><a href="/">Blabbr<br></a></h1>
 		<p id="tagline">Don't just think it... Blab it!</p>
 	
@@ -60,7 +60,7 @@
 		<address id="about" class="vcard body">
 		<span class="primary">
 			<strong><?=APP_NAME?></strong>
-				<img src="../images/blabbr-logo-sm-speech-long.png" alt="Blabbr logo" class="footericon" />
+				<img src="/images/blabbr-logo-sm-speech-long.png" alt="Blabbr logo" class="footericon" />
 			<span class="speech">Blabbr is the place for you to tell everyone what you're thinking, as though anybody actually cares!</span>
 		</span><!-- /.primary -->
 	

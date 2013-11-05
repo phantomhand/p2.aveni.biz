@@ -10,7 +10,7 @@
 					
 					<!-- If set, print this user's image -->
 					<?php if(empty($user['image'])): ?>
-				    <img class="avatar-mini" src="../images/avatar-question-mini.png" height="40" width="40" alt="Blabbr user pic"/>
+				    <img class="avatar-mini" src="/images/avatar-question-mini.png" height="40" width="40" alt="Blabbr user pic"/>
 				    
 				    <!-- If not, print the default image -->
 				    <?php else: ?>

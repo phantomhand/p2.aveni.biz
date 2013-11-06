@@ -50,12 +50,12 @@
 			
 				<h2><?php echo $user->first_name; ?>, this is your <?=APP_NAME?>!</h2>
 					
-				<p><b>What would you like to do?<br>
-				You can:</b></p>			
+				<p><b>What would you like to do? You can:</b></p>			
 				<ul>
-					<li>View <a href="/users/profile">your profile</a> and add an image</li>
+					<li>View <a href="/users/profile">your profile</a></li>
+					<li>Add a <a href="/users/profile">profile image</a></li>
 					<li>See <a href="/posts/users">who is Blabbing</a></li>
-					<li>Follow <a href="/posts/users">other Blabbrs</a> (and don't forget yourself!)</li>
+					<li>Follow <a href="/posts/users">other Blabbrs</a></li>
 					<li>Check out the <a href="/posts">latest Blabbs</a></li>			
 				</ul>
 			</div>

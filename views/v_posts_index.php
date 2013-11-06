@@ -14,7 +14,6 @@
 		
 		<h2>Latest Blabs</h2>
 		
-	
 			<?php foreach($posts as $post):?>					
 			
 				<article class="blab">
@@ -33,15 +32,13 @@
 
 						<br>
 						<br>
-							
+						
 							<!-- If posted by this user, show a button allowing deletion -->
-						    <?php if($user): ?>
+						    <?php if($user->user_id == $post['user_id']):?>
 						    	<form method='POST' action='/posts/p_delete'>
 						    		<input type="hidden" name="post_id" value="<?=$post['post_id']?>">
 							       	<input type="submit" value="Delete" class="deletebutton">
-							    </form>
-							<?php else: ?>			    				    
-						    
+							    </form>   				    
 						    <?php endif; ?>
 						    <br>
 							<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">

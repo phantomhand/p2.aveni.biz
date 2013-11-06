@@ -30,7 +30,7 @@
 		        <?php if($user): ?>
 		        <li><a href='/users/logout'>Logout</a></li>
 		        <li><a href='/users/profile'>Profile</a></li>
-		        <li><a href='/posts'>Stream</a></li>
+		        <li><a href='/posts'>Blabbstream</a></li>
 		        <li><a href='/posts/users'>Blabbrs</a></li>				
 				
 				<!-- Menu options for users who are not logged in -->
@@ -68,7 +68,7 @@
 			<span class="features"><strong>Now with bonus features!</strong></span><br>
 								<ul class="features">
 									<li>Add a photo to your profile!</li>
-									<li>Edit or delete your embarrassing Blabs!</li>
+									<li>Delete your embarrassing Blabs!</li>
 									<li>More cool stuff!</li>
 								</ul>
 	

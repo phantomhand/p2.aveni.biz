@@ -9,7 +9,7 @@
 							
 				<p>Got something on your mind? Don't just think it to yourself... 
 				Blab it to anyone who will listen! You can also follow others and see what they are Blabbing about.
-				So, what are you waiting for? Sign up now and get to Blabbing!</p>
+				So, what are you waiting for? Sign up now and start Blabbing!</p>
 				
 				<form method='POST' action='/users/signup'><input type="submit" value="Sign up" class="button">
 				</form>

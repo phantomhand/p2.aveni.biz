@@ -6,7 +6,7 @@
 
 /* Body *****/
 	body {
-		background: #1485CC; /*AAA*/
+		background: #1485CC;
 		color: #000305;
 		font-size: 87.5%; /* Base font size: 14px */
 		font-family: 'Helvetica', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
@@ -179,10 +179,10 @@
 	}
 	
 	#tagline {
-	font-size: 1.25em;
-	font-weight: bold;
-	padding-top: 15px;
-	margin: -35px 0 10px 0;	
+		font-size: 1.25em;
+		font-weight: bold;
+		padding-top: 15px;
+		margin: -35px 0 10px 0;	
 	}
 	
 	p.welcome {
@@ -528,9 +528,11 @@
 	}
 	
 	#about .speech {
+		font-size: medium;
+		font-weight: bold;
 		float: left; 
 		width: 275px; 
-		margin: -90px 0 0 98px;
+		margin: -93px 0 0 101px;
 	} 
 	
 	#about .footericon {

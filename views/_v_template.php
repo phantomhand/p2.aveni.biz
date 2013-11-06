@@ -65,12 +65,12 @@
 		</span><!-- /.primary -->
 	
 		
-			<span class="features"><strong>Now with bonus features!</strong></span><br>
-								<ul class="features">
+			<p style="color: white; margin-bottom: -10px;"><strong>Now with exciting +1 bonus features!</strong></p><br>
+								<ol class="features">
 									<li>Add a photo to your profile!</li>
 									<li>Delete your embarrassing Blabs!</li>
 									<li>More cool stuff!</li>
-								</ul>
+								</ol>
 	
 			</address><!-- /#about -->
 		© 2013 Frank Aveni

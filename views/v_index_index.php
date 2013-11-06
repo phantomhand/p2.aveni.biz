@@ -3,7 +3,7 @@
 	
 		<?php if (!$user): ?> <!-- If visitor is not logged in, show Sign up and Log in options -->
 			
-			<div class="signup"> <!-- Sign up form -->
+			<div class="signup"> <!-- Sign up -->
 				
 				<h2>Welcome to <?=APP_NAME?>!</h2>
 							
@@ -14,7 +14,7 @@
 				<form method='POST' action='/users/signup'><input type="submit" value="Sign up" class="button">
 				</form>
 			    
-			</div>
+			</div> <!-- Close sign up -->
 			
 			<div class="login"> <!-- Log in form -->
 			
@@ -37,12 +37,13 @@
 			        <div class='error'>
 			            <p><strong>Login failed.<br>
 			            Please check your email and password.</strong></p>
-			    <?php echo $error ?>
-			</div>
+			    		<?php echo $error ?>
+					</div>
+			</div> <!-- Close log in form -->
 			
 			<br>
 			        
-		<?php endif; ?>
+		<?php endif;?><!-- Close non-logged in view -->
 		    
 		<?php else:?> <!-- If user is logged in, show a greeting and a list of features -->
 		
@@ -58,15 +59,15 @@
 					<li>Follow <a href="/posts/users">other Blabbrs</a></li>
 					<li>Check out the <a href="/posts">latest Blabbs</a></li>			
 				</ul>
-			</div>
+			</div> <!-- Close list -->
 			
-			<div class="login"> <!-- Picture -->
+			<div class="login"> <!-- Grid image -->
 			
 			<a href="/posts/users"><img src="/images/user-grid-mini.jpg" alt="Blabbr User Grid" height="184" width="360"></a>
 				
-			</div>
+			</div> <!-- Close grid image -->
 			
-		<?php endif; ?>		
+		<?php endif;?> <!-- Close logged in view -->
 		 
 	</article>
 </aside>

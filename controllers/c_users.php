@@ -44,7 +44,7 @@ class users_controller extends base_controller {
 	    # Insert this user into the database
 	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 	    
-	    # Set user to follow his or herself by default
+	    # Set new user to follow his or herself by default
 	    $data = Array('user_id' => $user_id,
                 'user_id_followed' => $user_id,
                 'created' => Time::now(),

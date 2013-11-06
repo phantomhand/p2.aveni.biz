@@ -33,17 +33,17 @@
 				   
 				<br>
 				    
-			    <?php if (isset ($error) ): ?> <!-- Show an error if the login failed -->
-			        <div class='error'>
-			            <p><strong>Login failed.<br>
-			            Please check your email and password.</strong></p>
-			    		<?php echo $error ?>
-					</div>
+				    <?php if (isset ($error) ): ?> <!-- Show an error if the login failed -->
+				        <div class='error'>
+				            <p><strong>Login failed.<br>
+				            Please check your email and password.</strong></p>
+				    		<?php echo $error ?>
+						</div>
+					<?php endif;?><!-- Close error -->
+				
 			</div> <!-- Close log in form -->
 			
-			<br>
-			        
-		<?php endif;?><!-- Close non-logged in view -->
+			<br>	        
 		    
 		<?php else:?> <!-- If user is logged in, show a greeting and a list of features -->
 		

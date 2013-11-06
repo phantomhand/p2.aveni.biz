@@ -29,9 +29,11 @@
 					<!-- Show the post info and content -->
 					<h1 class="postusername"><?=$post['first_name']?> <?=$post['last_name']?></h1>
 						<p class="blabtext"><?=$post['content']?>
-
 						<br>
 						<br>
+							<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+							<?=Time::display($post['created'])?>
+							</time>
 						
 							<!-- If posted by this user, show a button allowing deletion -->
 						    <?php if($user->user_id == $post['user_id']):?>
@@ -40,11 +42,6 @@
 							       	<input type="submit" value="Delete" class="deletebutton">
 							    </form>   				    
 						    <?php endif; ?>
-						    <br>
-							<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
-							<?=Time::display($post['created'])?>
-							</time>
-							
 						</p>
 				</article>
 				    

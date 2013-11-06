@@ -9,28 +9,31 @@ class users_controller extends base_controller {
         echo "This is the index page";
     }
 
-    public function signup() {
+    public function signup($error = NULL) {
         # Setup view
         $this->template->content = View::instance('v_users_signup');
         $this->template->title   = "Sign Up";
+        
+       	# Pass data to the view
+	    $this->template->content->error = $error; 
         		
 		# Render template
         echo $this->template;
         
         }
 	 
-    public function p_signup($error = NULL) {    
-    	# Set up the view
-	    $this->template->content = View::instance("v_users_signup");
-	
-	    # Pass data to the view
-	    $this->template->content->error = $error; 	   
-    	   		    
+    public function p_signup() {      	   		    
  	    # More data we want stored with the user
 	    $_POST['created']  = Time::now();
 	    $_POST['modified'] = Time::now();
 	    
-	    $this->userObj->confirm_unique_email($email);
+	    # Check for existing user by email
+	    $exists = $this->userObj->confirm_unique_email($_POST['email']);
+	    
+	    # If user exists, show a prompt to login
+	    if ($exists == false){
+	    Router::redirect("/users/signup/exists");
+	    }
 	    	    
 		# Encrypt the password  
 	    $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
@@ -40,6 +43,14 @@ class users_controller extends base_controller {
 	    
 	    # Insert this user into the database
 	    $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
+	    
+	    # Set user to follow his or herself by default
+	    $data = Array('user_id' => $user_id,
+                'user_id_followed' => $user_id,
+                'created' => Time::now(),
+                );
+                
+        $selffollow = DB::instance(DB_NAME)->insert("users_users", $data);
 	    	
 	    # Redirect to the login page
 	    Router::redirect("/users/login"); 	        
@@ -81,7 +92,7 @@ class users_controller extends base_controller {
 	    # Login passed
 	    else {
 	        setcookie("token", $token, strtotime('+2 weeks'), '/');
-	        Router::redirect("/posts");
+	        Router::redirect("/");
 	    } //end else
 
 	}

@@ -28,10 +28,10 @@
 					
 					<!-- Show the post info and content -->
 					<h1 class="postusername"><?=$post['first_name']?> <?=$post['last_name']?></h1>
-						<p class="blabtext"><?=$post['content']?>
+						<p class="blabtext"><?=$post['content']?></p>
 						<br>
 						<br>
-							<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+							<time datetime="<?=Time::display($post['created'],'Y-m-d H:i')?>">
 							<?=Time::display($post['created'])?>
 							</time>
 						
@@ -42,7 +42,6 @@
 							       	<input type="submit" value="Delete" class="deletebutton">
 							    </form>   				    
 						    <?php endif; ?>
-						</p>
 				</article>
 				    
 			<?php endforeach; ?>

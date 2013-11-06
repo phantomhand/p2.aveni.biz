@@ -129,6 +129,10 @@
 	aside, nav, article, figure {
 		display: block;
 	}
+	
+	.error {
+		color: red;
+	}
 
 /***** Layout *****************/
 	

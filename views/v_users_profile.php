@@ -3,7 +3,7 @@
 		
 		<figure>
 			<?php if ( ($user->image == NULL) ): ?> 
-				<img class="avatar-lg" src="../images/avatar-question.jpg" alt="Blabbr User Pic" height="200" width="200"/>
+				<img class="avatar-lg" src="/images/avatar-question.jpg" alt="Blabbr User Pic" height="200" width="200"/>
 			
 			<?php elseif (isset ($user->image) ): ?>
 				<img class="avatar-lg" src="<?=$user->image?>" alt="Blabbr User Pic" height="200" width="200"/>
@@ -12,7 +12,7 @@
 				<label for="content">Update your profile image</label>
 				<form method='POST' enctype="multipart/form-data" action='/users/add_image/'>
 					<input type='file' name='image'>
-					<input type='submit' class="button">
+					<input type='submit' value='Submit' class="button">
 				</form>
 		</figure>
 		

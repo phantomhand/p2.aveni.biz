@@ -25,16 +25,12 @@
 		
 		<strong>Email:</strong> <?=$user->email?><br>
 		
-		<form method='POST' action='/users/p_add_bio'>
-		<label for='content'>Bio:</label><br>
-		<textarea style="width: 400px; height: 80px;" name='content' id='content'></textarea><br>
-		<input type='submit' value='Add bio' class="button" style="float: left; margin-top: -12px;">
+		<form method='POST' action='/posts/p_add'>
+			<label for='content'><b>Add a new Blab:</b></label><br>
+			<textarea style="width: 400px; height: 80px;" name="content" id='content'></textarea>
+			
+			<input type='submit' value='Add New Blab' class="button" style="float: left; margin-top: -12px;">	
 		</form>
-		<!--<p>
-		 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium orci a molestie commodo. 
-		 Aliquam sed metus libero. Maecenas adipiscing tempus accumsan. Mauris venenatis dictum arcu at interdum. 
-		 Vestibulum fermentum augue id scelerisque egestas. Nam malesuada, mauris placerat malesuada consectetur.
-		</p>-->
 	
 	</article>
 </aside><!-- /#featured -->

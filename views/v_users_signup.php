@@ -24,11 +24,12 @@
 	
 		</form>
 		
-		<?php if (isset ($error) ): ?>
-		        <div class='error' style="color: red;">
-		            You're already signed up! Why not <a href="/users/login">log in</a>?
-		        </div>
-		        <br>
+		<?php if ($error):?>
+				<br>
+			        <div class="error">
+			            You're already signed up! Why not <a href="/users/login">log in</a>?
+			        </div>
 		<?php endif; ?>
 	</article>
 </aside>
+

@@ -28,7 +28,7 @@
 			
 			<p>The site has been checked as valid HTML5.</p>
 			
-			<p>Thank you to all the TF's and other students who helped me with this project.</p>
+			<!-- <p>Thank you to all the TF's and other students who helped me with this project.</p> -->
 			
 	</article>
 </aside>
